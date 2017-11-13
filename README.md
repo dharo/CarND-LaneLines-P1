@@ -31,7 +31,7 @@ The goals / steps of this project are the following:
 
 ### 1. The pipeline: meat and bones of locating lane lines from images
 
-This consists of A FEW STEPS:
+This consists of 5 main steps :
 ![gray]
 
     1. Grayscale: Taking colors out of the image to begin filtering out the data needed to identify
@@ -65,23 +65,21 @@ This consists of A FEW STEPS:
     and average points are calculated to draw the lines on the original image
 [OpenCV Hough Line Transform](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html#hough-line-transform)
 
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-
-If you'd like to include images to show how the pipeline works, here is how to include an image: 
-
-![alt text][image1]
-
 
 ### 2. Identify potential shortcomings with your current pipeline
 
+There exists some situations where the current solution will fail to locate lines. 
+These situations include worn down lines on a road, multiple lanelines such as carpool lane in night.mp4
+The current implementation of the pipeline is designed around daytime drives and single lined lane markers.
 
-One potential shortcoming would be what would happen when ... 
-
-Another shortcoming could be ...
+This pipeline is also assuming the horizon (road meets sky) is under the center of the frame by about 5% of the frame height.
+This value would have to be calibrated depending on the way a camera is mounted and how much of the lane we want to see.
 
 
 ### 3. Suggest possible improvements to your pipeline
 
-A possible improvement would be to ...
+The biggest improvement this pipeline can use is removing the jitter introduced between frames. 
+This jitter is caused by the constant calculation of lines on individual frames. This could be addressed
+by keeping a running average of drawn Hough lines from the previous frame and included into the calculation
+of the current frame's Hough lines.
 
-Another potential improvement could be to ...
