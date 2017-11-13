@@ -34,17 +34,33 @@ The goals / steps of this project are the following:
 This consists of A FEW STEPS:
 1. Grayscale: 
 
-![alt text][gray]
+![gray]
 
     Taking colors out of the image to begin filtering out the data needed to identify
     objects of interest -- in this case lane lines.
-2. Gaussian Blur:
-    Blurring the image is required to filter out any noise from less prominent edges in the image.
-3. Canny Algorithm:
     
-4. Focus on region of interest
+2. Gaussian Blur:
+![blur]
+
+    Blurring the image is required to filter out any noise from less prominent edges in the image.
+
+3. Canny Algorithm:
+![canny]
+
+    Grayscaled image is put through a Canny algorithm to identify edges in an image.
+    
+4. Focus on region of interest:
+![roi]
+
+    Focus on region of interest. We know that lane lines are located on a specigic region on the image. We remove all else
+    in order to find the lines that make up the lane.
+
+
 5. Hough and annotating original image
- 
+![hough] ![result]
+
+    Hough algorithm takes the Canny and region reduced image to locate lines. Finally lines are identified and average points
+    are calculated to draw the lines on the original image
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
