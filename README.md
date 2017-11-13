@@ -92,4 +92,4 @@ of the current frame's Hough lines.
 
 Values for tuning image algorithms were left unchaged.
 
-![night]
+![night_gif]
