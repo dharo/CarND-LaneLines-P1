@@ -65,6 +65,7 @@ This consists of 5 main steps :
     and average points are calculated to draw the lines on the original image
 [OpenCV Hough Line Transform](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html#hough-line-transform)
 
+---
 
 ### 2. Identify potential shortcomings with your current pipeline
 
@@ -75,6 +76,7 @@ The current implementation of the pipeline is designed around daytime drives and
 This pipeline is also assuming the horizon (road meets sky) is under the center of the frame by about 5% of the frame height.
 This value would have to be calibrated depending on the way a camera is mounted and how much of the lane we want to see.
 
+---
 
 ### 3. Suggest possible improvements to your pipeline
 
