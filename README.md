@@ -41,13 +41,13 @@ This consists of A FEW STEPS:
 ![blur]
 
     2. Gaussian Blur: Blurring the image is required to filter out any noise from less prominent edges.
-    [OpenCV GaussianBlur](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#gaussianblur)
+[OpenCV GaussianBlur](https://docs.opencv.org/2.4/modules/imgproc/doc/filtering.html?highlight=gaussianblur#gaussianblur)
 
 ![canny]
 
     3. Canny Algorithm: Grayscaled image is put through a Canny algorithm
     to identify edges in an image.
-    [OpenCV Canny Edge Detector](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html#canny-edge-detector)    
+[OpenCV Canny Edge Detector](https://docs.opencv.org/2.4/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html#canny-edge-detector)    
 
 ![roi]
 
@@ -63,7 +63,7 @@ This consists of A FEW STEPS:
     5. Hough and annotating original image: Hough algorithm takes the Canny
     and region reduced image to locate lines. Finally lines are identified 
     and average points are calculated to draw the lines on the original image
-    [OpenCV Hough Line Transform](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html#hough-line-transform)
+[OpenCV Hough Line Transform](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_imgproc/py_houghlines/py_houghlines.html#hough-line-transform)
 
 In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
 
