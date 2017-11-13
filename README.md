@@ -24,7 +24,7 @@ The goals / steps of this project are the following:
 [roi]: ./result_images/Region_of_interest.png "roi"
 [hough]: ./result_images/Hough.png "Hough"
 [result]: ./result_images/Result.png "Result"
-[night_gif]: ./test_videos_output/night.gif "Night"
+[night_gif]: ./night.gif "Night"
 
 ---
 
