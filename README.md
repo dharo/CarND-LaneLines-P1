@@ -24,6 +24,7 @@ The goals / steps of this project are the following:
 [roi]: ./result_images/Region_of_interest.png "roi"
 [hough]: ./result_images/Hough.png "Hough"
 [result]: ./result_images/Result.png "Result"
+[night_gif]: ./test_videos_output/night.gif "Night"
 
 ---
 
@@ -85,3 +86,10 @@ This jitter is caused by the constant calculation of lines on individual frames.
 by keeping a running average of drawn Hough lines from the previous frame and included into the calculation
 of the current frame's Hough lines.
 
+---
+
+### Pipeline tested with night driving
+
+Values for tuning image algorithms were left unchaged.
+
+![night]
